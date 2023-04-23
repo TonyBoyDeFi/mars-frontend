@@ -35,7 +35,7 @@ const ProfileUserMenuItem: React.FC<React.PropsWithChildren<ProfileUserMenuItemP
 
   if (!hasProfile) {
     return (
-      <NextLink href="/create-profile" passHref>
+      <NextLink href="#" passHref>
         <UserMenuItem disabled={disabled}>
           <Flex alignItems="center" justifyContent="space-between" width="100%">
             {t('Make a Profile')}

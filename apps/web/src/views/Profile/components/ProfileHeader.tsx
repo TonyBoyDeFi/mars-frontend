@@ -124,14 +124,14 @@ const ProfileHeader: React.FC<React.PropsWithChildren<HeaderProps>> = ({
         <>
           {hasProfile && accountPath && isConnectedAccount ? (
             <EditProfileAvatar
-              src={avatarImage}
+              src="https://i.ibb.co/QMRJV2r/logo.png"
               alt={t('User profile picture')}
               onSuccess={() => {
                 onSuccess?.()
               }}
             />
           ) : (
-            <AvatarImage src={avatarImage} alt={t('User profile picture')} />
+            <AvatarImage src="https://i.ibb.co/QMRJV2r/logo.png" alt={t('User profile picture')} />
           )}
         </>
       )

@@ -59,7 +59,7 @@ const NetworkSelect = ({ switchNetwork, chainId }) => {
         style={{ justifyContent: 'flex-start' }}
         as="a"
         target="_blank"
-        href="https://mars-frontend-web.vercel.app/"
+        href="https://marswap.vercel.app/"
       >
         <Image
           src="https://i.ibb.co/jyK3BH1/logo.png"

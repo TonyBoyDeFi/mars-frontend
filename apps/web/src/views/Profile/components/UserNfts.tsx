@@ -81,7 +81,7 @@ const UserNfts: React.FC<
         <Flex p="24px" flexDirection="column" alignItems="center">
           <NoNftsImage />
           <Text pt="8px" bold>
-            {t('No NFTs found')}
+            {t('You Do Not Have Any NFTs')}
           </Text>
         </Flex>
       ) : // User has NFTs and data has been fetched
