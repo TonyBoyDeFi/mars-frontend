@@ -146,19 +146,7 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
                   <MenuItems items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="24px" />
                 </AtomBox>
               </Flex>
-              <Flex alignItems="center" height="100%">
-                <Box mt="4px">
-                  <LangSelector
-                    currentLang={currentLang}
-                    langs={langs}
-                    setLang={setLang}
-                    buttonScale="xs"
-                    color="textSubtle"
-                    hideLanguage
-                  />
-                </Box>
-                {rightSide}
-              </Flex>
+
               <Flex alignItems="center" height="100%">
                 <Box mt="4px">
                   <LangSelector

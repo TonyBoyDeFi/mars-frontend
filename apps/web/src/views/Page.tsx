@@ -22,7 +22,7 @@ const Page: React.FC<
   const { t } = useTranslation()
   const { chainId } = useActiveChainId()
   const isBSC = chainId === ChainId.BSC
-  const externalText = isBSC ? t('Enter Crolon Mars') : ''
+  const externalText = isBSC ? t('Enter Crolon Mars Ecosystem') : ''
   const externalLinkUrl = isBSC ? 'https://crolonmars.com/' : ''
 
   return (

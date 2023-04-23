@@ -11,7 +11,7 @@ export const swapSectionData = (t: TranslateFunction): SalesSectionProps => ({
     external: false,
   },
   secondaryButton: {
-    to: 'https://docs.pancakeswap.finance/',
+    to: 'https://marswap.vercel.app',
     text: t('Learn'),
     external: true,
   },
@@ -30,12 +30,12 @@ export const earnSectionData = (t: TranslateFunction): SalesSectionProps => ({
   bodyText: t('PancakeSwap makes it easy to make your crypto work for you.'),
   reverse: true,
   primaryButton: {
-    to: '/farms',
+    to: 'https://marswap.vercel.app',
     text: t('Explore'),
     external: false,
   },
   secondaryButton: {
-    to: 'https://docs.pancakeswap.finance/products/yield-farming',
+    to: 'https://marswap.vercel.app',
     text: t('Learn'),
     external: true,
   },
@@ -56,12 +56,12 @@ export const cakeSectionData = (t: TranslateFunction): SalesSectionProps => ({
   ),
   reverse: false,
   primaryButton: {
-    to: '/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82&chainId=56',
+    to: 'https://marswap.vercel.app',
     text: t('Buy CAKE'),
     external: false,
   },
   secondaryButton: {
-    to: 'https://docs.pancakeswap.finance/tokenomics/cake',
+    to: 'https://marswap.vercel.app',
     text: t('Learn'),
     external: true,
   },

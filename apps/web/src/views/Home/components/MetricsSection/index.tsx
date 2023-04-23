@@ -3,6 +3,7 @@ import { useTranslation } from '@pancakeswap/localization'
 import useTheme from 'hooks/useTheme'
 import { formatLocalisedCompactNumber } from '@pancakeswap/utils/formatBalance'
 import useSWRImmutable from 'swr/immutable'
+import IconCard, { IconCardData } from '../IconCard'
 
 const Stats = () => {
   const { t } = useTranslation()
@@ -57,9 +58,8 @@ const Stats = () => {
   </thead>
 </table>
 </div>
+</Flex>
 
-
-    </Flex>
   )
 }
 

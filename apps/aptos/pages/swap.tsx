@@ -425,7 +425,7 @@ const SwapPage = () => {
             <Flex width="100%" alignItems="center" justifyContent="center">
               <Flex flex="1" />
               <Flex flex="1" justifyContent="center">
-                <CurrencyInputHeaderTitle>{t('Swap')}</CurrencyInputHeaderTitle>
+                <CurrencyInputHeaderTitle>{t('Swap Tokens')}</CurrencyInputHeaderTitle>
               </Flex>
               <Flex flex="1" justifyContent="flex-end">
                 {account && (
@@ -437,7 +437,7 @@ const SwapPage = () => {
               </Flex>
             </Flex>
           }
-          subtitle={<CurrencyInputHeaderSubTitle>{t('Trade tokens in an instant')}</CurrencyInputHeaderSubTitle>}
+          subtitle={<CurrencyInputHeaderSubTitle>{t('Swap and trade tokens in lightning speed')}</CurrencyInputHeaderSubTitle>}
         />
         <AutoColumn gap="sm" p="16px">
           <CurrencyInputPanel
