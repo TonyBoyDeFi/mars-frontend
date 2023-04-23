@@ -40,7 +40,7 @@ const ConnectWalletButton = ({ children, ...props }: ButtonProps) => {
         {children || <Trans>Connect Wallet</Trans>}
       </Button>
       <WalletModalV2
-        docText={t('How to Connect')}
+        docText={t('Need help connecting?')}
         docLink={docLink}
         isOpen={open}
         wallets={wallets}
