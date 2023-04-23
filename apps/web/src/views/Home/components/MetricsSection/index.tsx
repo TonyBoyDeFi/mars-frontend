@@ -3,6 +3,7 @@ import { useTranslation } from '@pancakeswap/localization'
 import useTheme from 'hooks/useTheme'
 import { formatLocalisedCompactNumber } from '@pancakeswap/utils/formatBalance'
 import useSWRImmutable from 'swr/immutable'
+import { HorizontalDivider } from 'views/Nft/market/components/BuySellModals/shared/styles'
 import IconCard, { IconCardData } from '../IconCard'
 import StatCardContent from './StatCardContent'
 
@@ -55,7 +56,7 @@ const Stats = () => {
       <Text textAlign="center" color="textSubtle" bold mb="32px">
         {t('Join the path towards a better future!')}
       </Text>
-
+<Flex flexWrap="wrap"><HorizontalDivider/></Flex>
       <Flex maxWidth="100%" flexDirection={['column', null, null, 'row']}>
         <IconCard {...UsersCardData} mr={[null, null, null, '16px']} mb={['16px', null, null, '0']}>
           <StatCardContent

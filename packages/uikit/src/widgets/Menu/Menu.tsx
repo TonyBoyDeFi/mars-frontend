@@ -148,9 +148,6 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
               </Flex>
               <Flex alignItems="center" height="100%">
                 <Box mt="4px">
-                toggleTheme={toggleTheme}
-                </Box>
-                <Box mt="4px">
                   <LangSelector
                     currentLang={currentLang}
                     langs={langs}
