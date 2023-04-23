@@ -3,8 +3,6 @@ import { useTranslation } from '@pancakeswap/localization'
 import useTheme from 'hooks/useTheme'
 import { formatLocalisedCompactNumber } from '@pancakeswap/utils/formatBalance'
 import useSWRImmutable from 'swr/immutable'
-import IconCard, { IconCardData } from '../IconCard'
-import StatCardContent from './StatCardContent'
 
 const Stats = () => {
   const { t } = useTranslation()
@@ -19,17 +17,8 @@ const Stats = () => {
 
 
 
-  const UsersCardData: IconCardData = {
-    icon: <CommunityIcon color="secondary" width="36px" />,
-  }
 
-  const TradesCardData: IconCardData = {
-    icon: <SwapIcon color="primary" width="36px" />,
-  }
 
-  const StakedCardData: IconCardData = {
-    icon: <ChartIcon color="failure" width="36px" />,
-  }
 
   return (
     <Flex justifyContent="center" alignItems="center" flexDirection="column">
@@ -54,31 +43,15 @@ const Stats = () => {
     <tr>
       <th scope="col">      <div className="card" style={{width: '18rem'}}>
 <img className="card-img-top" src="https://i.ibb.co/R6557yf/Bronze.png" alt="NFT Land" />
-<div className="card-body">
-  <h5 className="card-title"></h5>
-  <p className="card-text"></p>
-</div>
 </div></th>
       <th scope="col">      <div className="card" style={{width: '18rem'}}>
 <img className="card-img-top" src="https://i.ibb.co/RY9f3DY/Gold.png" alt="NFT Land" />
-<div className="card-body">
-  <h5 className="card-title"></h5>
-  <p className="card-text"></p>
-</div>
 </div></th>
       <th scope="col">      <div className="card" style={{width: '18rem'}}>
 <img className="card-img-top" src="https://i.ibb.co/kHFVYH3/Sapphire.png" alt="NFT Land" />
-<div className="card-body">
-  <h5 className="card-title"></h5>
-  <p className="card-text"></p>
-</div>
 </div></th>
       <th scope="col">      <div className="card" style={{width: '18rem'}}>
 <img className="card-img-top" src="https://i.ibb.co/dkvPbPf/Diamond.png" alt="NFT Land" />
-<div className="card-body">
-  <h5 className="card-title"></h5>
-  <p className="card-text"></p>
-</div>
 </div></th>
     </tr>
   </thead>
