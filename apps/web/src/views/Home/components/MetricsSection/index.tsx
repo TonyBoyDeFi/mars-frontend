@@ -3,7 +3,6 @@ import { useTranslation } from '@pancakeswap/localization'
 import useTheme from 'hooks/useTheme'
 import { formatLocalisedCompactNumber } from '@pancakeswap/utils/formatBalance'
 import useSWRImmutable from 'swr/immutable'
-import { HorizontalDivider } from 'views/Nft/market/components/BuySellModals/shared/styles'
 import IconCard, { IconCardData } from '../IconCard'
 import StatCardContent from './StatCardContent'
 
@@ -18,8 +17,7 @@ const Stats = () => {
   const users = formatLocalisedCompactNumber(addressCount)
   const tvlString = tvl ? formatLocalisedCompactNumber(tvl) : '-'
 
-  const tvlText = t('Trusting the process and progress and growing together to one of the biggest DEXs.', { tvl: tvlString })
-  const [entrusting, inFunds] = tvlText.split(tvlString)
+
 
   const UsersCardData: IconCardData = {
     icon: <CommunityIcon color="secondary" width="36px" />,
@@ -37,49 +35,57 @@ const Stats = () => {
     <Flex justifyContent="center" alignItems="center" flexDirection="column">
       <img src="https://i.ibb.co/jyK3BH1/logo.png" alt="logo"/>
       <Heading textAlign="center" scale="xl">
-        {t('Used by millions.')}
+        {t('Millions of users globally.')}
       </Heading>
       <Heading textAlign="center" scale="xl" mb="32px">
-        {t('Trusted among the community.')}
+        {t('Trusted among the biggest projects.')}
       </Heading>
-      <Text textAlign="center" color="textSubtle">
-        {t('Mars Swap comes to thrive.')}
-      </Text>
-      <Flex flexWrap="wrap">
-        <Text display="inline" textAlign="center" color="textSubtle" mb="20px">
-          {entrusting}
-          <>{tvl ? <>{tvlString}</> : <Skeleton display="inline-block" height={16} width={70} mt="2px" />}</>
-          {inFunds}
-        </Text>
-      </Flex>
+      <Heading textAlign="center" color="textSubtle" mb="32px">
+        {t('Marswap will become one of the biggest DEX + AMM + NFT platforms in the DeFi space.')}
+      </Heading>
 
-      <Text textAlign="center" color="textSubtle" bold mb="32px">
-        {t('Join the path towards a better future!')}
-      </Text>
-<Flex flexWrap="wrap"><HorizontalDivider/></Flex>
-      <Flex maxWidth="100%" flexDirection={['column', null, null, 'row']}>
-        <IconCard {...UsersCardData} mr={[null, null, null, '16px']} mb={['16px', null, null, '0']}>
-          <StatCardContent
-            headingText={t('%users% users', { users })}
-            bodyText={t('in the last 30 days')}
-            highlightColor={theme.colors.secondary}
-          />
-        </IconCard>
-        <IconCard {...TradesCardData} mr={[null, null, null, '16px']} mb={['16px', null, null, '0']}>
-          <StatCardContent
-            headingText={t('%trades% transactions', { trades })}
-            bodyText={t('made in the last 30 days')}
-            highlightColor={theme.colors.primary}
-          />
-        </IconCard>
-        <IconCard {...StakedCardData}>
-          <StatCardContent
-            headingText={t('$%tvl% staked', { tvl: tvlString })}
-            bodyText={t('Value of Assets')}
-            highlightColor={theme.colors.failure}
-          />
-        </IconCard>
-      </Flex>
+      <Heading textAlign="center" color="textSubtle" bold mb="32px">
+        {t('Join the support of Marswap and thrive with us to grow on global scale!')}
+      </Heading>
+
+<div className="table-responsive">
+<table className="table">
+  <thead>
+    <tr>
+      <th scope="col">      <div className="card" style={{width: '18rem'}}>
+<img className="card-img-top" src="https://i.ibb.co/R6557yf/Bronze.png" alt="NFT Land" />
+<div className="card-body">
+  <h5 className="card-title"></h5>
+  <p className="card-text"></p>
+</div>
+</div></th>
+      <th scope="col">      <div className="card" style={{width: '18rem'}}>
+<img className="card-img-top" src="https://i.ibb.co/RY9f3DY/Gold.png" alt="NFT Land" />
+<div className="card-body">
+  <h5 className="card-title"></h5>
+  <p className="card-text"></p>
+</div>
+</div></th>
+      <th scope="col">      <div className="card" style={{width: '18rem'}}>
+<img className="card-img-top" src="https://i.ibb.co/kHFVYH3/Sapphire.png" alt="NFT Land" />
+<div className="card-body">
+  <h5 className="card-title"></h5>
+  <p className="card-text"></p>
+</div>
+</div></th>
+      <th scope="col">      <div className="card" style={{width: '18rem'}}>
+<img className="card-img-top" src="https://i.ibb.co/dkvPbPf/Diamond.png" alt="NFT Land" />
+<div className="card-body">
+  <h5 className="card-title"></h5>
+  <p className="card-text"></p>
+</div>
+</div></th>
+    </tr>
+  </thead>
+</table>
+</div>
+
+
     </Flex>
   )
 }

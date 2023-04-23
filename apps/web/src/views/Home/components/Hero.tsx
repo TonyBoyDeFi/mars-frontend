@@ -6,6 +6,9 @@ import Image from 'next/legacy/image'
 import { ChainId } from '@pancakeswap/sdk'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import styled, { keyframes } from 'styled-components'
+import { Grid } from 'swiper'
+import { GridPlaceholderItem } from 'views/Nft/market/components/GridPlaceholder'
+import { getNftsFromDifferentCollectionsApi } from 'state/nftMarket/helpers'
 import bunnyImage from '../../../../public/images/home/lunar-bunny/astronaut-bunny.png'
 import CompositeImage, { CompositeImageProps } from './CompositeImage'
 import { SlideSvgDark, SlideSvgLight } from './SlideSvg'
@@ -136,9 +139,10 @@ const Hero = () => {
           <Flex>
             {!account && <ConnectWalletButton mr="8px" />}
             <NextLinkFromReactRouter to="/swap">
-              <Button variant={!account ? 'secondary' : 'primary'}>{t('Trade Now')}</Button>
+              <Button variant={!account ? 'secondary' : 'primary'}>{t('Trade On Marswap')}</Button>
             </NextLinkFromReactRouter>
           </Flex>
+          
         </Flex>
         <Flex
           height={['192px', null, null, '100%']}
@@ -147,8 +151,9 @@ const Hero = () => {
           mb={['24px', null, null, '0']}
           position="relative"
         >
+          
           <BunnyWrapper>
-            <Image src={bunnyImage} priority placeholder="blur" alt={t('Lunar bunny')} />
+            <Image src={bunnyImage} priority placeholder="blur" alt={t('Marswap')} />
           </BunnyWrapper>
           <StarsWrapper>
             <CompositeImage {...starsImage} />
@@ -158,5 +163,6 @@ const Hero = () => {
     </>
   )
 }
+
 
 export default Hero
