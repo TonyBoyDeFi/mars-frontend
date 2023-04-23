@@ -65,9 +65,9 @@ const Pools: React.FC<React.PropsWithChildren> = () => {
               {showFinishedPools && (
                 <FinishedTextContainer>
                   <Text fontSize={['16px', null, '20px']} color="failure" pr="4px">
-                    {t('Looking for v1 CAKE syrup pools?')}
+                    {t('#')}
                   </Text>
-                  <FinishedTextLink href="/v2/migration" fontSize={['16px', null, '20px']} color="failure">
+                  <FinishedTextLink href="#" fontSize={['16px', null, '20px']} color="failure">
                     {t('Go to migration page')}.
                   </FinishedTextLink>
                 </FinishedTextContainer>
@@ -93,7 +93,7 @@ const Pools: React.FC<React.PropsWithChildren> = () => {
                           ) : (
                             <>
                               <Text mb="10px" textTransform="uppercase" fontSize="12px" color="textSubtle" bold>
-                                {t('Start earning')}
+                                {t('Start Earning')}
                               </Text>
                               <ConnectWalletButton />
                             </>

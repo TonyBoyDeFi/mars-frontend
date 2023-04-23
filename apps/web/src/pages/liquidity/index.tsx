@@ -190,17 +190,15 @@ export default function PoolListPage() {
 
   return (
     <Page>
-      <Flex m="24px 0" maxWidth="854px">
-        <FarmV3MigrationBanner />
-      </Flex>
+
       <AppBody
         style={{
           maxWidth: '854px',
         }}
       >
         <AppHeader
-          title={t('Your Liquidity')}
-          subtitle={t('List of your liquidity positions')}
+          title={t('Your Liquidity Positions')}
+          subtitle={t('Your own liquidity contributions and revenue')}
           IconSlot={
             <IconButton onClick={onPresentTransactionsModal} variant="text" scale="sm">
               <HistoryIcon color="textSubtle" width="24px" />

@@ -400,21 +400,18 @@ const Farms: React.FC<React.PropsWithChildren> = ({ children }) => {
     <FarmsV3Context.Provider value={providerValue}>
       <PageHeader>
         <Flex flexDirection="column">
-          <Box m="24px 0">
-            <FarmV3MigrationBanner />
-          </Box>
           <FarmFlexWrapper justifyContent="space-between">
             <Box style={{ flex: '1 1 100%' }}>
               <FarmH1 as="h1" scale="xxl" color="secondary" mb="24px">
-                {t('Farms')}
+                {t('Marswap Farms')}
               </FarmH1>
               <FarmH2 scale="lg" color="text">
-                {t('Stake LP tokens to earn.')}
+                {t('Stake LP Tokens To Earn Passively.')}
               </FarmH2>
-              <NextLinkFromReactRouter to="/farms/auction" prefetch={false}>
+              <NextLinkFromReactRouter to="/liquidity" prefetch={false}>
                 <Button p="0" variant="text">
                   <Text color="primary" bold fontSize="16px" mr="4px">
-                    {t('Community Auctions')}
+                    {t('Provide Liquidity to Acquire LP Tokens')}
                   </Text>
                   <ArrowForwardIcon color="primary" />
                 </Button>
