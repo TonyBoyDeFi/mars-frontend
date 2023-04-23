@@ -264,7 +264,7 @@ export function RoutingSettingsButton({
       <AtomBox textAlign="center">
         <NotificationDot show={isRoutingSettingChange && showRedDot}>
           <Button variant="text" onClick={() => setShow(true)} scale="sm" {...buttonProps}>
-            {children || t('Customize Routing')}
+            {children || t('Swap Routing Customization')}
           </Button>
         </NotificationDot>
       </AtomBox>
@@ -289,7 +289,7 @@ function RoutingSettings() {
 
   return (
     <Modal
-      title={t('Customize Routing')}
+      title={t('Swap Routing Customization')}
       headerRightSlot={
         isRoutingSettingChange && (
           <Button variant="text" scale="sm" onClick={reset}>
@@ -306,10 +306,10 @@ function RoutingSettings() {
         gap="16px"
       >
         <AtomBox>
-          <PreTitle mb="24px">{t('Liquidity source')}</PreTitle>
+          <PreTitle mb="24px">{t('Source of Liquidity')}</PreTitle>
           <Flex justifyContent="space-between" alignItems="center" mb="24px">
             <Flex alignItems="center">
-              <Text>PancakeSwap V3</Text>
+              <Text>Marswap Router V3</Text>
               <QuestionHelper
                 text={
                   <Flex>
@@ -333,15 +333,15 @@ function RoutingSettings() {
           </Flex>
           <Flex justifyContent="space-between" alignItems="center" mb="24px">
             <Flex alignItems="center">
-              <Text>PancakeSwap V2</Text>
+              <Text>Marswap Router V2</Text>
               <QuestionHelper
                 text={
                   <Flex flexDirection="column">
                     <Text mr="5px">
-                      {t('The previous V2 exchange is where a number of iconic, popular assets are traded.')}
+                      {t('V2 Router is the most popular router and where most of the projects and tokens are traded.')}
                     </Text>
                     <Text mr="5px" mt="1em">
-                      {t('Recommend leaving this on to ensure backward compatibility.')}
+                      {t('We recommend leaving this on to ensure backward compatibility.')}
                     </Text>
                   </Flex>
                 }
@@ -358,13 +358,13 @@ function RoutingSettings() {
           </Flex>
           <Flex justifyContent="space-between" alignItems="center" mb="24px">
             <Flex alignItems="center">
-              <Text>PancakeSwap {t('StableSwap')}</Text>
+              <Text>Marswap {t('StableSwap')}</Text>
               <QuestionHelper
                 text={
                   <Flex flexDirection="column">
                     <Text mr="5px">
                       {t(
-                        'StableSwap provides higher efficiency for stable or pegged assets and lower fees for trades.',
+                        'StableSwap provides higher efficiency for stable or pegged assets and lower fees for trades. Still on experimental stage.',
                       )}
                     </Text>
                   </Flex>
@@ -383,31 +383,7 @@ function RoutingSettings() {
               }}
             />
           </Flex>
-          <Flex justifyContent="space-between" alignItems="center" mb="24px">
-            <Flex alignItems="center">
-              <Text>{`PancakeSwap ${t('MM Linked Pool')}`}</Text>
-              <QuestionHelper
-                text={
-                  <Flex flexDirection="column">
-                    <Text mr="5px">{t('Trade through the market makers if they provide better deal')}</Text>
-                    <Text mr="5px" mt="1em">
-                      {t(
-                        'If a trade is going through market makers, it will no longer route through any traditional AMM DEX pools.',
-                      )}
-                    </Text>
-                  </Flex>
-                }
-                placement="top"
-                ml="4px"
-              />
-            </Flex>
-            <Toggle
-              id="toggle-disable-mm-button"
-              checked={isMMLinkedPoolByDefault}
-              onChange={(e) => setIsMMLinkedPoolByDefault(e.target.checked)}
-              scale="md"
-            />
-          </Flex>
+
           {onlyOneAMMSourceEnabled && (
             <Message variant="warning">
               <MessageText>
@@ -428,7 +404,7 @@ function RoutingSettings() {
               }}
             />
             <RowFixed>
-              <Text>{t('Allow Multihops')}</Text>
+              <Text>{t('Multihops Allowed')}</Text>
               <QuestionHelper
                 text={
                   <Flex flexDirection="column">
@@ -459,7 +435,7 @@ function RoutingSettings() {
               }}
             />
             <RowFixed alignItems="center">
-              <Text>{t('Allow Split Routing')}</Text>
+              <Text>{t('Split Routing Allowed')}</Text>
               <QuestionHelper
                 text={
                   <Flex flexDirection="column">

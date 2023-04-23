@@ -11,10 +11,7 @@ const PancakeToggle: React.FC<React.PropsWithChildren<PancakeToggleProps>> = ({
     <PancakeInput id={props.id || "pancake-toggle"} scale={scale} type="checkbox" checked={checked} {...props} />
     <PancakeLabel scale={scale} checked={checked} htmlFor={props.id || "pancake-toggle"}>
       <div className="pancakes">
-        <div className="pancake" />
-        <div className="pancake" />
-        <div className="pancake" />
-        <div className="butter" />
+      <img width="30px" height="30px" src="https://i.ibb.co/jyK3BH1/logo.png" alt="logo"/>
       </div>
     </PancakeLabel>
   </PancakeStack>

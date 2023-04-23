@@ -9,11 +9,11 @@ const NoOrdersMessage: React.FC<React.PropsWithChildren<{ orderCategory: ORDER_C
   const NoOrdersText = useMemo(() => {
     switch (orderCategory) {
       case ORDER_CATEGORY.Open:
-        return t('No Open Orders')
+        return t('You Do Not Have Open Orders')
       case ORDER_CATEGORY.History:
-        return t('No Order History')
+        return t('History is empty')
       case ORDER_CATEGORY.Expired:
-        return t('No Expired Orders')
+        return t('You Have No Expired Orders')
       default:
         return ''
     }
@@ -21,7 +21,7 @@ const NoOrdersMessage: React.FC<React.PropsWithChildren<{ orderCategory: ORDER_C
 
   return (
     <Flex p="24px" justifyContent="center" alignItems="center" flexDirection="column">
-      <BunnyPlaceholderIcon width={64} />
+      <img width="125px" height="125px" src="https://i.ibb.co/jyK3BH1/logo.png" alt="logo"/>
       <Text color="textDisabled">{NoOrdersText}</Text>
     </Flex>
   )

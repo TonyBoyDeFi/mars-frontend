@@ -54,11 +54,11 @@ const config: (
           href: '/swap',
         },
         {
-          label: t('Manage Liquidity'),
+          label: t('Liquidity Management'),
           href: '/liquidity',
         },
         {
-          label: `${t('Limit Orders')} (V2)`,
+          label: `${t('Limit Orders')}`,
           href: '/limit-orders',
           supportChainIds: SUPPORT_ONLY_BSC,
           image: '/images/decorations/3d-coin.png',
@@ -67,45 +67,45 @@ const config: (
     },
     {
       label: t('Revenue'),
-      href: '/farms',
+      href: '#',
       icon: EarnIcon,
       fillIcon: EarnFillIcon,
       image: '/images/decorations/pe2.png',
       items: [
         {
           label: t('LP Farming'),
-          href: '/farms',
+          href: '#',
         },
         {
           label: t('Pools'),
-          href: '/pools',
+          href: '#',
           supportChainIds: SUPPORT_ONLY_BSC,
         },
       ].map((item) => addMenuItemSupported(item, chainId)),
     },
     {
       label: t('Competitions'),
-      href: '/prediction',
+      href: '#',
       icon: TrophyIcon,
       fillIcon: TrophyFillIcon,
       supportChainIds: SUPPORT_ONLY_BSC,
       items: [
         {
           label: t('Trading Competition'),
-          href: '/competition',
+          href: '#',
           image: '/images/decorations/tc.png',
           hideSubNav: true,
         },
         {
-          label: t('Lottery'),
-          href: '/lottery',
+          label: t('Lotteries'),
+          href: '#',
           image: '/images/decorations/lottery.png',
         },
       ],
     },
     {
       label: t('NFTs'),
-      href: `${nftsBaseUrl}`,
+      href: `#`,
       icon: NftIcon,
       fillIcon: NftFillIcon,
       supportChainIds: SUPPORT_ONLY_BSC,
@@ -113,15 +113,15 @@ const config: (
       items: [
         {
           label: t('Explore'),
-          href: `${nftsBaseUrl}`,
+          href: `#`,
         },
         {
           label: t('Collections'),
-          href: `${nftsBaseUrl}/collections`,
+          href: `#`,
         },
         {
           label: t('NFT Activity'),
-          href: `${nftsBaseUrl}/activity`,
+          href: `#`,
         },
       ],
     },
@@ -133,17 +133,14 @@ const config: (
       items: [
         {
           label: t('Information'),
-          href: '/info',
-        },
-        {
-          type: DropdownMenuItemType.DIVIDER,
+          href: '#',
         },
         {
           type: DropdownMenuItemType.DIVIDER,
         },
         {
           label: t('Docs'),
-          href: 'https://mars-frontend-web.vercel.app/',
+          href: 'https://marswap.vercel.app',
           type: DropdownMenuItemType.EXTERNAL_LINK,
         },
       ].map((item) => addMenuItemSupported(item, chainId)),
