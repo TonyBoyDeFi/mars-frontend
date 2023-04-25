@@ -30,9 +30,10 @@ const Stats = () => {
     alignItems: 'center',
     fontSize: '30px',
     cursor: 'pointer',
-    opacity: isHover ? '1' : '0.7',
+    opacity: isHover ? '0.7' : '1',
     transition: '0.5s',
-    borderRadius: '15px',
+    borderRadius: isHover ? '0px' : '20px',
+    boxShadow: '1px 1px 1px 1px orange'
 
  };
   return (
@@ -53,24 +54,12 @@ const Stats = () => {
       </Heading>
 
 
-
-<div className="table-responsive" style={boxStyle}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave} >
+<div className="table-responsive">
 <table className="table">
   <thead>
     <tr>
-      <th scope="col">      <div className="card" style={{width: '18rem'}}>
-<img  className="card-img-top" src="https://i.ibb.co/R6557yf/Bronze.png" alt="NFT Land" />
-</div></th>
-      <th scope="col">      <div className="card" style={{width: '18rem'}}>
-<img className="card-img-top" src="https://i.ibb.co/RY9f3DY/Gold.png" alt="NFT Land" />
-</div></th>
-      <th scope="col">      <div className="card" style={{width: '18rem'}}>
-<img className="card-img-top" src="https://i.ibb.co/kHFVYH3/Sapphire.png" alt="NFT Land" />
-</div></th>
-      <th scope="col">      <div className="card" style={{width: '18rem'}}>
-<img className="card-img-top" src="https://i.ibb.co/dkvPbPf/Diamond.png" alt="NFT Land" />
+      <th scope="col"><div className="card" style={{width: '18rem'}}>
+<img  style={boxStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="card-img-top" src="https://i.ibb.co/t2BPYdX/tanzanite.jpg" alt="NFT Land" />
 </div></th>
     </tr>
   </thead>
