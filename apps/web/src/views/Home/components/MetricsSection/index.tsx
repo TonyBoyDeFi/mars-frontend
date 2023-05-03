@@ -35,8 +35,8 @@ const Stats = () => {
 
       <Swiper 
         effect="coverflow"
-        grabCursor={true}
-        centeredSlides={true}
+        grabCursor
+        centeredSlides
         slidesPerView="auto"
         coverflowEffect={{
           rotate: 50,
@@ -48,8 +48,8 @@ const Stats = () => {
         pagination={{
           clickable: true,
         }}
-        navigation={true}
-        scrollbar={true}
+        navigation
+        scrollbar
         modules={[EffectCoverflow, Pagination, Navigation, Scrollbar]}
         className="mySwiper"
       >
