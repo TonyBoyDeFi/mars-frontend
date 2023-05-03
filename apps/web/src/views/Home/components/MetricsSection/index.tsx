@@ -1,41 +1,21 @@
-import { Heading, Flex, Text, Skeleton, ChartIcon, CommunityIcon, SwapIcon } from '@pancakeswap/uikit'
-import { useTranslation } from '@pancakeswap/localization'
-import useTheme from 'hooks/useTheme'
-import { formatLocalisedCompactNumber } from '@pancakeswap/utils/formatBalance'
-import useSWRImmutable from 'swr/immutable'
-import { useState } from 'react';
+import { useTranslation } from "@pancakeswap/localization"
+import { Flex, Heading } from "@pancakeswap/uikit"
+import React, { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+// import required modules
+import { EffectCoverflow, Pagination, Navigation, Scrollbar } from "swiper";
 
 const Stats = () => {
   const { t } = useTranslation()
-  const { theme } = useTheme()
 
-  const { data: tvl } = useSWRImmutable('tvl')
-  const { data: txCount } = useSWRImmutable('totalTx30Days')
-  const { data: addressCount } = useSWRImmutable('addressCount30Days')
-  const trades = formatLocalisedCompactNumber(txCount)
-  const users = formatLocalisedCompactNumber(addressCount)
-  const tvlString = tvl ? formatLocalisedCompactNumber(tvl) : '-'
-  const [isHover, setIsHover] = useState(false);
-  const handleMouseEnter = () => {
-    setIsHover(true);
- };
- const handleMouseLeave = () => {
-  setIsHover(false);
-  };
-  const boxStyle = {
-    height: '100%',
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    fontSize: '30px',
-    cursor: 'pointer',
-    opacity: isHover ? '0.7' : '1',
-    transition: '0.5s',
-    borderRadius: isHover ? '0px' : '20px',
-    boxShadow: '1px 1px 1px 1px orange'
-
- };
   return (
     <Flex justifyContent="center" alignItems="center" flexDirection="column">
       <img src="https://i.ibb.co/jyK3BH1/logo.png" alt="logo"/>
@@ -53,20 +33,40 @@ const Stats = () => {
         {t('Join the support of Marswap and thrive with us to grow on global scale!')}
       </Heading>
 
+      <Swiper 
+        effect="coverflow"
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView="auto"
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 5,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        scrollbar={true}
+        modules={[EffectCoverflow, Pagination, Navigation, Scrollbar]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
+          <img src="https://i.ibb.co/jZnc2L8/Silver.png" />
+        </SwiperSlide>
+        <SwiperSlide>
+        <img src="https://i.ibb.co/jZnc2L8/Silver.png" />
+        </SwiperSlide>
+        <SwiperSlide>
+        <img src="https://i.ibb.co/jZnc2L8/Silver.png" />
+        </SwiperSlide>
+      </Swiper>
 
-<div className="table-responsive">
-<table className="table">
-  <thead>
-    <tr>
-      <th scope="col"><div className="card" style={{width: '18rem'}}>
-<img  style={boxStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="card-img-top" src="https://i.ibb.co/t2BPYdX/tanzanite.jpg" alt="NFT Land" />
-</div></th>
-    </tr>
-  </thead>
-</table>
-</div>
+
 </Flex>
-  )
-}
+
+)}
 
 export default Stats
